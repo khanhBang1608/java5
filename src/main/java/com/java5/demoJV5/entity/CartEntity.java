@@ -29,12 +29,7 @@ public class CartEntity {
     @JoinColumn(name = "user_id", nullable = false)
     private UserEntity user;
 
-    @NotNull
-    @ColumnDefault("getdate()")
-    @Column(name = "date_created", nullable = false)
-    private Instant dateCreated;
-
     @OneToMany(mappedBy = "cart", fetch = FetchType.LAZY)
-    private List<CartDetail> cartDetails;
+    private List<CartDetailEntity> cartDetails;
 
 }

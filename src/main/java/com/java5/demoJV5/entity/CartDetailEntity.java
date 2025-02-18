@@ -16,7 +16,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "cart_details")
-public class CartDetail {
+public class CartDetailEntity {
     @Id
     @Column(name = "cart_detail_id", nullable = false)
     private Integer id;
